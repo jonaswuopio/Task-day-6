@@ -17,15 +17,17 @@ df$name <- factor(df$name)
 
 ggplot(df, aes(x = myaxis, y = value, fill = name)) +  
   geom_violin(trim = FALSE) +        
-  scale_fill_manual(values = c("A" = "lightblue", 
-                               "B" = "darkgreen", 
-                               "C" = "lightpink",
-                               "D" = "purple")) +  #I don´t have time to figure out the exact colors
-  geom_boxplot(width = 0.1) +
+  scale_fill_manual(values = c("A" = "indianred1", 
+                               "B" = "limegreen", 
+                               "C" = "turquoise3",
+                               "D" = "darkorchid1")) +  #I don´t have time to figure out the exact colors
+  geom_boxplot(width = 0.1, outlier.shape = NA) +
   labs(title = "Boxplot + Violin", 
        x = "name", 
        y = "value") +
-  theme(legend.position = "none", 
-        panel.border = element_rect(color = "black", fill = NA, linewidth = 1))
+  theme_minimal()+
+  theme(
+    legend.position = "none", 
+    panel.border = element_rect(color = "black", fill = NA, linewidth = 1))
 
 
