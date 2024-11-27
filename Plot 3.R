@@ -5,8 +5,8 @@
 df <- read.csv("./data_plot3.csv")
 
 
-ggplot(df, aes(x = cty, y = hwy, color = "darkred", size = )) +
-  geom_point() +
+ggplot(df, aes(x = cty, y = hwy)) +
+  geom_point(color = "red", size = 3) +
   labs(title = "Counts plot\nmpg: city vs highway mileage") +
   theme(legend.position = "none", 
         panel.border = element_rect(color = "black", fill = NA, linewidth = 1),
