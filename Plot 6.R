@@ -14,9 +14,10 @@ ggplot(df, aes(x = log2FoldChange, y = logP)) +
              alpha = 0.7, size = 2) +
   scale_color_manual(values = c("red"="red","blue"="blue", "black"="black")) +  # Red for positive significant, black for negative, gray for non-significant
   theme_minimal() +
-  labs(title = "Volcano Plot",
-       x = "log2FC",
-       y = "-Log10(P-value)") +
+  labs(
+      title = "Volcano Plot",
+      x = expression(paste('log' [2], 'FC')), y = '-log10 (P-value)',
+      y = "-Log10(P-value)") +
   theme(
     legend.position = "none",
     panel.background = element_rect(fill = "gray90"),  
