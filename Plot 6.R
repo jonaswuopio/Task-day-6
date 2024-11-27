@@ -1,5 +1,7 @@
 ##Plot 6
 
+library(ggrepel) #package to avoid overlap in point labels
+
 df <- read.csv("./data_plot6.csv")
 
 df <- df %>%
